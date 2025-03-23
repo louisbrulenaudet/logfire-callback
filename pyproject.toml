@@ -12,6 +12,9 @@ license = "Apache-2.0"
 authors = [
     { name = "Louis Brulé Naudet", email = "contact@louisbrulenaudet.com" },
 ]
+maintainers = [
+    { name = "Louis Brulé Naudet", email = "contact@louisbrulenaudet.com" },
+]
 keywords = ["logfire", "transformers", "huggingface", "logging", "callback", "trainer"]
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -42,12 +45,13 @@ dev = [
     "pre-commit-uv>=4.1.4",
     "pyright>=1.1.392.post0",
     "pytest>=8.3.4",
+    "pytest-cov>=4.1.0",
     "ruff>=0.9.3",
 ]
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]
-addopts = "--maxfail=1 --disable-warnings -q"
+addopts = "--maxfail=1 --disable-warnings -q --cov=src/logfire_callback --cov-report=term-missing --cov-report=html"
 
 [tool.ruff.lint]
 select = [
@@ -75,7 +79,7 @@ ignore = [
 ]
 
 [tool.ruff.lint.per-file-ignores]
-"**/{tests,docs,.venv}/*" = [
+"**/{tests,docs,.venv,.coveragerc}/*" = [
     "ANN",
 ]
 

@@ -46,7 +46,6 @@ class LogfireCallback(TrainerCallback):
                 "LogfireCallback requires `logfire` to be installed. Run `pip install logfire`."
             )
 
-
         self._logfire = logfire
         self._logfire_token = os.getenv("LOGFIRE_TOKEN", None)
         self._initialized = False

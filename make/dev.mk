@@ -9,6 +9,11 @@ init: ## Initialize development environment
 	uv pip install -r pyproject.toml --all-extras
 	uv sync
 
+install-dev: ## Install development dependencies
+	@echo "🔧 Installing development dependencies..."
+	uv pip install -e ".[dev]"
+	@echo "✅ Development dependencies installed successfully"
+
 run: ## Run the application
 	@echo "🚀 Starting application..."
 	uv run train.py
@@ -36,3 +41,13 @@ build: ## Build the project
 	@echo "🔨 Building project..."
 	uv build
 	@echo "✅ Build completed successfully"
+
+publish: ## Publish the project
+	@echo "📦 Publishing project..."
+	uv publish
+	@echo "✅ Project published successfully"
+
+coverage: ## Run tests with coverage
+	@echo "📊 Running tests with coverage..."
+	uv run pytest -v --cov=src/logfire_callback --cov-report=html
+	@echo "✅ Coverage report generated successfully"
