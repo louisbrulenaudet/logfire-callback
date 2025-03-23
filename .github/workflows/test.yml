@@ -30,7 +30,7 @@ jobs:
       run: |
         uv venv
         uv pip install --upgrade pip
-        uv pip install -r pyproject.toml --all-extras
+        uv pip install -e ".[dev]"
         uv sync
 
     - name: Run tests with pytest
