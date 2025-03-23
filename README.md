@@ -1,6 +1,6 @@
 ![Plot](https://github.com/louisbrulenaudet/logfire-callback/blob/main/assets/thumbnail.png?raw=true)
 
-# Logfire callback, observability for Hugging Face's Transformers training loop
+# Logfire-callback, observability for Hugging Face's Transformers training loop 🤗
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) ![Maintainer](https://img.shields.io/badge/maintainer-@louisbrulenaudet-blue) ![Python Version](https://img.shields.io/badge/python-3.11%2B-blue.svg) ![Code Style](https://img.shields.io/badge/code%20style-ruff-000000.svg) ![Package Manager](https://img.shields.io/badge/package%20manager-uv-purple.svg)
 
 A callback for logging training events from Hugging Face's Transformers to [Logfire](https://logfire.sh) 🤗
