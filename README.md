@@ -77,12 +77,17 @@ make init
 
 ### Available Make Commands
 
-- `make test` - Run the test suite
+- `make test` - Execute test suite
+- `make init` - Initialize development environment
+- `make install-dev` - Install development dependencies
+- `make run` - Run the application
 - `make check` - Run code quality checks
 - `make format` - Format source code
-- `make build` - Build the project
 - `make upgrade` - Update project dependencies
 - `make pre-commit` - Run pre-commit checks
+- `make build` - Build the project
+- `make publish` - Publish the project
+- `make coverage` - Run tests with coverage
 
 ## License
 
