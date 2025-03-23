@@ -1,0 +1,22 @@
+name: Ruff Lint
+
+on: [push, pull_request]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        run: curl -LsSf https://astral.sh/uv/install.sh | sh
+
+      - name: Install Ruff using uv
+        run: uv venv && uv pip install ruff
+
+      - name: Run Ruff Linter
+        run: uv pip run ruff check .
+
+      - name: Check Formatting
+        run: uv pip run ruff format --check .
